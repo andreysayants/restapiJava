@@ -25,9 +25,9 @@ public class FindPassword {
 
                 Response response2 = RestAssured
                         .given()
-                        .queryParam("auth_cookie", auth_cookie)
+                        .cookie("auth_cookie", auth_cookie)
                         .when()
-                        .post("https://playground.learnqa.ru/ajax/api/check_auth_cookie")
+                        .get("https://playground.learnqa.ru/ajax/api/check_auth_cookie")
                         .andReturn();
 
                 System.out.println(password);
@@ -36,7 +36,7 @@ public class FindPassword {
                 if (result.equals("You are NOT authorized")) {
 
                 } else {
-                    System.out.println("Пароль " + password);
+                    System.out.println("\nПароль " + password);
                     System.out.println(result);
                     break;
                 }
