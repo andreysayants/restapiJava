@@ -1,3 +1,5 @@
+package oldTests;
+
 import org.junit.jupiter.api.Test;
 public class HelloFromMe {
     @Test

@@ -1,3 +1,5 @@
+package oldTests;
+
 import io.restassured.RestAssured;
 import io.restassured.http.Header;
 import io.restassured.response.Response;
